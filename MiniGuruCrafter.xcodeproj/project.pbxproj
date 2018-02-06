@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC673E202A0E0900361F7F /* AppDelegate.m */; };
+		E9EC6742202A0E0900361F7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6741202A0E0900361F7F /* ViewController.m */; };
+		E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6743202A0E0900361F7F /* Main.storyboard */; };
+		E9EC6748202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */; };
+		E9EC674A202A0E0900361F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6749202A0E0900361F7F /* Assets.xcassets */; };
+		E9EC674D202A0E0900361F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC674B202A0E0900361F7F /* LaunchScreen.storyboard */; };
+		E9EC6750202A0E0900361F7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC674F202A0E0900361F7F /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniGuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EC673D202A0E0900361F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E9EC673E202A0E0900361F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E9EC6740202A0E0900361F7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E9EC6741202A0E0900361F7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E9EC6744202A0E0900361F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9EC6747202A0E0900361F7F /* MiniGuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniGuruCrafter.xcdatamodel; sourceTree = "<group>"; };
+		E9EC6749202A0E0900361F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9EC674C202A0E0900361F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9EC674E202A0E0900361F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EC674F202A0E0900361F7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9EC6737202A0E0900361F7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9EC6731202A0E0900361F7F = {
+			isa = PBXGroup;
+			children = (
+				E9EC673C202A0E0900361F7F /* MiniGuruCrafter */,
+				E9EC673B202A0E0900361F7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9EC673B202A0E0900361F7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9EC673C202A0E0900361F7F /* MiniGuruCrafter */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC673D202A0E0900361F7F /* AppDelegate.h */,
+				E9EC673E202A0E0900361F7F /* AppDelegate.m */,
+				E9EC6740202A0E0900361F7F /* ViewController.h */,
+				E9EC6741202A0E0900361F7F /* ViewController.m */,
+				E9EC6743202A0E0900361F7F /* Main.storyboard */,
+				E9EC6749202A0E0900361F7F /* Assets.xcassets */,
+				E9EC674B202A0E0900361F7F /* LaunchScreen.storyboard */,
+				E9EC674E202A0E0900361F7F /* Info.plist */,
+				E9EC674F202A0E0900361F7F /* main.m */,
+				E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */,
+			);
+			path = MiniGuruCrafter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9EC6739202A0E0900361F7F /* MiniGuruCrafter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EC6753202A0E0900361F7F /* Build configuration list for PBXNativeTarget "MiniGuruCrafter" */;
+			buildPhases = (
+				E9EC6736202A0E0900361F7F /* Sources */,
+				E9EC6737202A0E0900361F7F /* Frameworks */,
+				E9EC6738202A0E0900361F7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniGuruCrafter;
+			productName = MiniGuruCrafter;
+			productReference = E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9EC6732202A0E0900361F7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Pavel Maiboroda";
+				TargetAttributes = {
+					E9EC6739202A0E0900361F7F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E9EC6735202A0E0900361F7F /* Build configuration list for PBXProject "MiniGuruCrafter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9EC6731202A0E0900361F7F;
+			productRefGroup = E9EC673B202A0E0900361F7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9EC6739202A0E0900361F7F /* MiniGuruCrafter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9EC6738202A0E0900361F7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC674D202A0E0900361F7F /* LaunchScreen.storyboard in Resources */,
+				E9EC674A202A0E0900361F7F /* Assets.xcassets in Resources */,
+				E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9EC6736202A0E0900361F7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC6742202A0E0900361F7F /* ViewController.m in Sources */,
+				E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */,
+				E9EC6750202A0E0900361F7F /* main.m in Sources */,
+				E9EC6748202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9EC6743202A0E0900361F7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EC6744202A0E0900361F7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9EC674B202A0E0900361F7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EC674C202A0E0900361F7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9EC6751202A0E0900361F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E9EC6752202A0E0900361F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9EC6754202A0E0900361F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniGuruCrafter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PM.MiniGuruCrafter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9EC6755202A0E0900361F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiniGuruCrafter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PM.MiniGuruCrafter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9EC6735202A0E0900361F7F /* Build configuration list for PBXProject "MiniGuruCrafter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC6751202A0E0900361F7F /* Debug */,
+				E9EC6752202A0E0900361F7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EC6753202A0E0900361F7F /* Build configuration list for PBXNativeTarget "MiniGuruCrafter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC6754202A0E0900361F7F /* Debug */,
+				E9EC6755202A0E0900361F7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9EC6747202A0E0900361F7F /* MiniGuruCrafter.xcdatamodel */,
+			);
+			currentVersion = E9EC6747202A0E0900361F7F /* MiniGuruCrafter.xcdatamodel */;
+			path = MiniGuruCrafter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9EC6732202A0E0900361F7F /* Project object */;
+}
