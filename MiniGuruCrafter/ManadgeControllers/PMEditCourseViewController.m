@@ -11,6 +11,7 @@
 #import "PMEditCourseTableViewCell.h"
 #import "PMTeacher+CoreDataProperties.h"
 #import "PMDataManager.h"
+#import "PMEditUserViewController.h"
 
 @interface PMEditCourseViewController ()
 
@@ -198,6 +199,8 @@ typedef enum {
         } else {
             NSArray *tempArray = [self.course.students allObjects];
             
+            cell.textLabel.textAlignment = NSTextAlignmentNatural;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [[tempArray objectAtIndex: indexPath.row - 1] firstName], [[tempArray objectAtIndex: indexPath.row - 1] lastName]];
         }
         
@@ -242,6 +245,19 @@ typedef enum {
         return NO;
     } else {
         return YES;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 2 && indexPath.row != 0) {
+
+        PMUser *user = [[self.course.students allObjects] objectAtIndex: indexPath.row - 1];
+        
+        PMEditUserViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMEditUserViewController"];
+        vc.user = user;
+        
+        [self.navigationController pushViewController: vc animated: YES];
     }
 }
 
