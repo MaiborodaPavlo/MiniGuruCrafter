@@ -44,7 +44,9 @@
     PMEditUserViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMEditUserViewController"];
     vc.user = nil;
     
-    [self.navigationController pushViewController: vc animated: YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: vc];
+    
+    [self presentViewController: nav animated: YES completion: nil];
 }
 
 #pragma mark - UITableViewDataSourse

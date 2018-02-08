@@ -34,6 +34,12 @@ typedef enum {
     
     if (self.isNewUser) {
         self.user = [NSEntityDescription insertNewObjectForEntityForName: @"PMUser" inManagedObjectContext: [[[PMDataManager sharedManager] persistentContainer] viewContext]];
+        
+        [self.navigationItem setHidesBackButton: YES];
+        
+        UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc] initWithTitle: @"Cancel" style: UIBarButtonItemStyleDone target: self action: @selector(actionCancel:)];
+        
+        self.navigationItem.leftBarButtonItem = cancelBarButton;
     }
     
     self.navigationItem.title = @"Edit user";
@@ -41,6 +47,7 @@ typedef enum {
     UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle: @"Done" style: UIBarButtonItemStyleDone target: self action: @selector(actionDone:)];
     
     self.navigationItem.rightBarButtonItem = doneBarButton;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +59,36 @@ typedef enum {
 
 #pragma mark - Actions
 
+- (void) dismissMe {
+    
+    if (self.isNewUser) {
+        [self dismissViewControllerAnimated: YES completion: nil];
+    } else {
+        [self.navigationController popViewControllerAnimated: YES];
+    }
+}
+
+- (void) actionCancel: (UIBarButtonItem *) sender {
+    
+    [[[[PMDataManager sharedManager] persistentContainer] viewContext] deleteObject: self.user];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismissMe];
+    });
+}
+
 - (void) actionDone: (UIBarButtonItem *) sender {
     
-    for (PMEditUserTableViewCell *cell in self.tableView.visibleCells) {
+    for (int i = 0; i < 3; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow: i inSection: 0];
+        
+        PMEditUserTableViewCell *cell = [self.tableView cellForRowAtIndexPath: indexPath];
+        
         if ([cell.nameLabel.text isEqualToString: @"First name"]) {
             self.user.firstName = cell.nameField.text;
         } else if([cell.nameLabel.text isEqualToString: @"Last name"]) {
             self.user.lastName = cell.nameField.text;
-        } else {
+        } else if ([cell.nameLabel.text isEqualToString: @"Email"]) {
             self.user.email = cell.nameField.text;
         }
     }
@@ -72,44 +101,80 @@ typedef enum {
         NSLog(@"ERRROR: %@", [error localizedDescription]);
     }
     
-    [self.navigationController popViewControllerAnimated: YES];
-    
+    [self dismissMe];
 }
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 2;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return @"User info";
+    } else {
+        return @"Courses";
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 3;
+    if (section == 0) {
+        return 3;
+    } else {
+        return [self.user.lernCourses count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *identifier = @"EditCell";
-    
-    PMEditUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
-
-    switch (indexPath.row) {
-        case PMUserDataTypeFirstName:
-            cell.nameLabel.text = @"First name";
-            cell.nameField.text = self.user.firstName;
-            break;
-            
-        case PMUserDataTypeLastName:
-            cell.nameLabel.text = @"Last name";
-            cell.nameField.text = self.user.lastName;
-            break;
-            
-        case PMUserDataTypeEmail:
-            cell.nameLabel.text = @"Email";
-            cell.nameField.text = self.user.email;
-            break;
-            
-        default: NSLog(@"AAAA");
-            break;
+    if (indexPath.section == 0) {
+        static NSString *identifier = @"EditCell";
+        
+        PMEditUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
+        
+        switch (indexPath.row) {
+            case PMUserDataTypeFirstName:
+                cell.nameLabel.text = @"First name";
+                cell.nameField.text = self.user.firstName;
+                break;
+                
+            case PMUserDataTypeLastName:
+                cell.nameLabel.text = @"Last name";
+                cell.nameField.text = self.user.lastName;
+                break;
+                
+            case PMUserDataTypeEmail:
+                cell.nameLabel.text = @"Email";
+                cell.nameField.text = self.user.email;
+                break;
+                
+            default: NSLog(@"AAAA");
+                break;
+        }
+        
+        return cell;
+        
+    } else {
+        static NSString *identifier = @"CourseCell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
+        
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: identifier];
+        }
+        
+        NSArray *tempArray = [self.user.lernCourses allObjects];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[[tempArray objectAtIndex: indexPath.row] name]];
+        
+        return cell;
     }
-
-    return cell;
+    
+    return nil;
 }
 
 #pragma mark - UITextFieldDelegate
