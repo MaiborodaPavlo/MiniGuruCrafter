@@ -12,6 +12,7 @@
 #import "PMTeacher+CoreDataProperties.h"
 #import "PMDataManager.h"
 #import "PMEditUserViewController.h"
+#import "PMCheckUsersViewController.h"
 
 @interface PMEditCourseViewController ()
 
@@ -258,6 +259,15 @@ typedef enum {
         vc.user = user;
         
         [self.navigationController pushViewController: vc animated: YES];
+        
+    } else if (indexPath.section == 2) {
+        
+        PMCheckUsersViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMCheckUsersViewController"];
+        vc.course = self.course;
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: vc];
+        
+        [self presentViewController: nav animated: YES completion: nil];
     }
 }
 
