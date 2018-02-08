@@ -10,7 +10,7 @@
 #import "PMCoreDataTableViewController.h"
 
 
-@interface ViewController : PMCoreDataTableViewController
+@interface PMUsersViewController : PMCoreDataTableViewController
 
 - (IBAction) actionAddUser: (UIBarButtonItem *) sender;
 

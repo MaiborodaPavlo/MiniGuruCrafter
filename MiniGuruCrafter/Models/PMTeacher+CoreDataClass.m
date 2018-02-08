@@ -1,5 +1,5 @@
 //
-//  PMObject+CoreDataClass.m
+//  PMTeacher+CoreDataClass.m
 //  MiniGuruCrafter
 //
 //  Created by Pavel on 08.02.2018.
@@ -7,8 +7,8 @@
 //
 //
 
-#import "PMObject+CoreDataClass.h"
+#import "PMTeacher+CoreDataClass.h"
 
-@implementation PMObject
+@implementation PMTeacher
 
 @end

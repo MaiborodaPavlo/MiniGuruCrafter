@@ -5,19 +5,24 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PMUser" inverseName="lernCourses" inverseEntity="PMUser" syncable="YES"/>
-        <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PMUser" inverseName="teachCourses" inverseEntity="PMUser" syncable="YES"/>
+        <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PMTeacher" inverseName="courses" inverseEntity="PMTeacher" syncable="YES"/>
     </entity>
     <entity name="PMObject" representedClassName="PMObject" isAbstract="YES" syncable="YES"/>
+    <entity name="PMTeacher" representedClassName="PMTeacher" parentEntity="PMObject" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PMCourse" inverseName="teacher" inverseEntity="PMCourse" syncable="YES"/>
+    </entity>
     <entity name="PMUser" representedClassName="PMUser" parentEntity="PMObject" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lernCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PMCourse" inverseName="students" inverseEntity="PMCourse" syncable="YES"/>
-        <relationship name="teachCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PMCourse" inverseName="teacher" inverseEntity="PMCourse" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PMUser" positionX="-1658" positionY="-2088" width="128" height="118"/>
-        <element name="PMCourse" positionX="-1910" positionY="-2088" width="128" height="118"/>
+        <element name="PMCourse" positionX="-1890" positionY="-2089" width="128" height="118"/>
         <element name="PMObject" positionX="-1773" positionY="-2223" width="128" height="43"/>
+        <element name="PMUser" positionX="-1649" positionY="-2083" width="128" height="103"/>
+        <element name="PMTeacher" positionX="-2117" positionY="-2086" width="128" height="88"/>
     </elements>
 </model>

@@ -10,6 +10,7 @@
 #import "PMUser+CoreDataProperties.h"
 #import "PMCourse+CoreDataProperties.h"
 #import "PMObject+CoreDataProperties.h"
+#import "PMTeacher+CoreDataProperties.h"
 
 static NSString* firstNames[] = {
     @"Tran", @"Lenore", @"Bud", @"Fredda", @"Katrice",
@@ -52,6 +53,16 @@ static NSString* lastNames[] = {
     return manager;
 }
 
+- (PMTeacher *) addRandomTeacher {
+    
+    PMTeacher *teacher = [NSEntityDescription insertNewObjectForEntityForName: @"PMTeacher" inManagedObjectContext: self.persistentContainer.viewContext];
+    
+    teacher.firstName = firstNames[arc4random() % 50];
+    teacher.lastName = lastNames[arc4random() % 50];
+    
+    return teacher;
+}
+
 - (PMUser *) addRandomUser {
     
     PMUser *user = [NSEntityDescription insertNewObjectForEntityForName: @"PMUser" inManagedObjectContext: self.persistentContainer.viewContext];
@@ -81,6 +92,8 @@ static NSString* lastNames[] = {
     course.name = name;
     course.subject = subject;
     course.branch = branch;
+
+    course.teacher = [self addRandomTeacher];
     
     return course;
 }
@@ -132,7 +145,7 @@ static NSString* lastNames[] = {
 
 - (void) generateAndAddRandomData {
     
-    NSArray *courses = @[[self addCourseWithName: @"iOS development" subject:@"Objective-c" andBranch: @"mobile programming"], [self addCourseWithName: @"Android development" subject: @"Java" andBranch: @",obile programming"], [self addCourseWithName: @"Backend. PHP development" subject: @"PHP" andBranch: @"web development"], [self addCourseWithName: @"Frontend. JavaScript level" subject: @"JS" andBranch: @"web development"], [self addCourseWithName: @"Frontend. HTML level" subject: @"HTML" andBranch: @"web development"]];
+    NSArray *courses = @[[self addCourseWithName: @"iOS development" subject:@"Objective-c" andBranch: @"mobile programming"], [self addCourseWithName: @"Android development" subject: @"Java" andBranch: @"mobile programming"], [self addCourseWithName: @"Backend. PHP development" subject: @"PHP" andBranch: @"web development"], [self addCourseWithName: @"Frontend. JavaScript level" subject: @"JS" andBranch: @"web development"], [self addCourseWithName: @"Frontend. HTML level" subject: @"HTML" andBranch: @"web development"]];
     
     for (int i = 0; i < 100; i++) {
         

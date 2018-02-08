@@ -1,5 +1,5 @@
 //
-//  PMCourse+CoreDataClass.h
+//  PMTeacher+CoreDataClass.h
 //  MiniGuruCrafter
 //
 //  Created by Pavel on 08.02.2018.
@@ -10,14 +10,14 @@
 #import <Foundation/Foundation.h>
 #import "PMObject+CoreDataProperties.h"
 
-@class PMTeacher, PMUser;
+@class PMCourse;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PMCourse : PMObject
+@interface PMTeacher : PMObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "PMCourse+CoreDataProperties.h"
+#import "PMTeacher+CoreDataProperties.h"

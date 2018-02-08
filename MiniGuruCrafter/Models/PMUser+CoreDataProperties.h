@@ -2,7 +2,7 @@
 //  PMUser+CoreDataProperties.h
 //  MiniGuruCrafter
 //
-//  Created by Pavel on 07.02.2018.
+//  Created by Pavel on 08.02.2018.
 //  Copyright © 2018 Pavel Maiboroda. All rights reserved.
 //
 //
@@ -16,20 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<PMUser *> *)fetchRequest;
 
+@property (nullable, nonatomic, copy) NSString *email;
 @property (nullable, nonatomic, copy) NSString *firstName;
 @property (nullable, nonatomic, copy) NSString *lastName;
-@property (nullable, nonatomic, copy) NSString *email;
-@property (nullable, nonatomic, retain) NSSet<PMCourse *> *teachCourses;
 @property (nullable, nonatomic, retain) NSSet<PMCourse *> *lernCourses;
 
 @end
 
 @interface PMUser (CoreDataGeneratedAccessors)
-
-- (void)addTeachCoursesObject:(PMCourse *)value;
-- (void)removeTeachCoursesObject:(PMCourse *)value;
-- (void)addTeachCourses:(NSSet<PMCourse *> *)values;
-- (void)removeTeachCourses:(NSSet<PMCourse *> *)values;
 
 - (void)addLernCoursesObject:(PMCourse *)value;
 - (void)removeLernCoursesObject:(PMCourse *)value;

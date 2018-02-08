@@ -6,28 +6,22 @@
 //  Copyright © 2018 Pavel Maiboroda. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PMUsersViewController.h"
 #import "PMDataManager.h"
 #import "PMUser+CoreDataProperties.h"
 #import "PMEditUserViewController.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface PMUsersViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation ViewController
+@implementation PMUsersViewController
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    //[[PMDataManager sharedManager] deleteAllObjects];
-    //[[PMDataManager sharedManager] generateAndAddRandomData];
-    //[[PMDataManager sharedManager] printAllObjects];
-    //[[PMDataManager sharedManager] saveContext];
-    
+
     self.navigationItem.title = @"Users";
 }
 
@@ -87,6 +81,8 @@
     NSSortDescriptor *lastNameDescriptor = [[NSSortDescriptor alloc] initWithKey: @"lastName" ascending: YES];
     
     [fetchRequest setSortDescriptors: @[firstNameDescriptor, lastNameDescriptor]];
+    
+    [fetchRequest setRelationshipKeyPathsForPrefetching: @[@"lernCourses"]];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];

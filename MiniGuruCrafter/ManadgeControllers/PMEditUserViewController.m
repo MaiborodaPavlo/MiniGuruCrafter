@@ -42,7 +42,7 @@ typedef enum {
         self.navigationItem.leftBarButtonItem = cancelBarButton;
     }
     
-    self.navigationItem.title = @"Edit user";
+    self.navigationItem.title = self.isNewUser ? @"Add new user" : @"Edit user";
     
     UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle: @"Done" style: UIBarButtonItemStyleDone target: self action: @selector(actionDone:)];
     

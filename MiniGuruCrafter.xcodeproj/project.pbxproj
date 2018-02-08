@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E90F022D202C4E0900016D51 /* UIView+PMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F022C202C4E0900016D51 /* UIView+PMTableViewCell.m */; };
+		E90F0231202C662C00016D51 /* PMCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0230202C662C00016D51 /* PMCoursesViewController.m */; };
+		E90F0234202C6BF200016D51 /* PMEditCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0233202C6BF200016D51 /* PMEditCourseViewController.m */; };
+		E90F0237202C70CF00016D51 /* PMEditCourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0236202C70CF00016D51 /* PMEditCourseTableViewCell.m */; };
+		E90F0248202C7A8A00016D51 /* PMUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F023A202C7A8A00016D51 /* PMUser+CoreDataClass.m */; };
+		E90F0249202C7A8A00016D51 /* PMUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F023B202C7A8A00016D51 /* PMUser+CoreDataProperties.m */; };
+		E90F024A202C7A8A00016D51 /* PMCourse+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F023E202C7A8A00016D51 /* PMCourse+CoreDataClass.m */; };
+		E90F024B202C7A8A00016D51 /* PMCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F023F202C7A8A00016D51 /* PMCourse+CoreDataProperties.m */; };
+		E90F024C202C7A8A00016D51 /* PMTeacher+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0242202C7A8A00016D51 /* PMTeacher+CoreDataClass.m */; };
+		E90F024D202C7A8A00016D51 /* PMTeacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0243202C7A8A00016D51 /* PMTeacher+CoreDataProperties.m */; };
+		E90F024E202C7A8A00016D51 /* PMObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0246202C7A8A00016D51 /* PMObject+CoreDataClass.m */; };
+		E90F024F202C7A8A00016D51 /* PMObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0247202C7A8A00016D51 /* PMObject+CoreDataProperties.m */; };
 		E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC673E202A0E0900361F7F /* AppDelegate.m */; };
-		E9EC6742202A0E0900361F7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6741202A0E0900361F7F /* ViewController.m */; };
+		E9EC6742202A0E0900361F7F /* PMUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6741202A0E0900361F7F /* PMUsersViewController.m */; };
 		E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6743202A0E0900361F7F /* Main.storyboard */; };
 		E9EC6748202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */; };
 		E9EC674A202A0E0900361F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6749202A0E0900361F7F /* Assets.xcassets */; };
@@ -19,23 +30,39 @@
 		E9EC6767202A16C800361F7F /* PMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6766202A16C800361F7F /* PMDataManager.m */; };
 		E9EC6770202A214000361F7F /* PMEditUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC676F202A214000361F7F /* PMEditUserViewController.m */; };
 		E9EC6795202B405800361F7F /* PMCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */; };
-		E9EC67A3202B427200361F7F /* PMObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */; };
-		E9EC67A4202B427200361F7F /* PMObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */; };
-		E9EC67A5202B427200361F7F /* PMUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */; };
-		E9EC67A6202B427200361F7F /* PMUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */; };
-		E9EC67A7202B427200361F7F /* PMCourse+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */; };
-		E9EC67A8202B427200361F7F /* PMCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */; };
 		E9EC67AE202B48E700361F7F /* PMEditUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E90F022B202C4E0900016D51 /* UIView+PMTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PMTableViewCell.h"; sourceTree = "<group>"; };
 		E90F022C202C4E0900016D51 /* UIView+PMTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PMTableViewCell.m"; sourceTree = "<group>"; };
+		E90F022F202C662C00016D51 /* PMCoursesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCoursesViewController.h; sourceTree = "<group>"; };
+		E90F0230202C662C00016D51 /* PMCoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCoursesViewController.m; sourceTree = "<group>"; };
+		E90F0232202C6BF200016D51 /* PMEditCourseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditCourseViewController.h; sourceTree = "<group>"; };
+		E90F0233202C6BF200016D51 /* PMEditCourseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditCourseViewController.m; sourceTree = "<group>"; };
+		E90F0235202C70CF00016D51 /* PMEditCourseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditCourseTableViewCell.h; sourceTree = "<group>"; };
+		E90F0236202C70CF00016D51 /* PMEditCourseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditCourseTableViewCell.m; sourceTree = "<group>"; };
+		E90F0238202C7A8A00016D51 /* PMUser+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E90F0239202C7A8A00016D51 /* PMUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		E90F023A202C7A8A00016D51 /* PMUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		E90F023B202C7A8A00016D51 /* PMUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E90F023C202C7A8A00016D51 /* PMCourse+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E90F023D202C7A8A00016D51 /* PMCourse+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataClass.h"; sourceTree = "<group>"; };
+		E90F023E202C7A8A00016D51 /* PMCourse+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataClass.m"; sourceTree = "<group>"; };
+		E90F023F202C7A8A00016D51 /* PMCourse+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E90F0240202C7A8A00016D51 /* PMTeacher+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMTeacher+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E90F0241202C7A8A00016D51 /* PMTeacher+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMTeacher+CoreDataClass.h"; sourceTree = "<group>"; };
+		E90F0242202C7A8A00016D51 /* PMTeacher+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMTeacher+CoreDataClass.m"; sourceTree = "<group>"; };
+		E90F0243202C7A8A00016D51 /* PMTeacher+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMTeacher+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E90F0244202C7A8A00016D51 /* PMObject+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E90F0245202C7A8A00016D51 /* PMObject+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataClass.h"; sourceTree = "<group>"; };
+		E90F0246202C7A8A00016D51 /* PMObject+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataClass.m"; sourceTree = "<group>"; };
+		E90F0247202C7A8A00016D51 /* PMObject+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniGuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC673D202A0E0900361F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9EC673E202A0E0900361F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E9EC6740202A0E0900361F7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9EC6741202A0E0900361F7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E9EC6740202A0E0900361F7F /* PMUsersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMUsersViewController.h; sourceTree = "<group>"; };
+		E9EC6741202A0E0900361F7F /* PMUsersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMUsersViewController.m; sourceTree = "<group>"; };
 		E9EC6744202A0E0900361F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9EC6747202A0E0900361F7F /* MiniGuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniGuruCrafter.xcdatamodel; sourceTree = "<group>"; };
 		E9EC6749202A0E0900361F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,18 +76,6 @@
 		E9EC676F202A214000361F7F /* PMEditUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditUserViewController.m; sourceTree = "<group>"; };
 		E9EC6793202B405800361F7F /* PMCoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCoreDataTableViewController.h; sourceTree = "<group>"; };
 		E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCoreDataTableViewController.m; sourceTree = "<group>"; };
-		E9EC6797202B427200361F7F /* PMObject+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E9EC6798202B427200361F7F /* PMObject+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataClass.h"; sourceTree = "<group>"; };
-		E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataClass.m"; sourceTree = "<group>"; };
-		E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E9EC679B202B427200361F7F /* PMUser+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E9EC679C202B427200361F7F /* PMUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataClass.h"; sourceTree = "<group>"; };
-		E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataClass.m"; sourceTree = "<group>"; };
-		E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E9EC679F202B427200361F7F /* PMCourse+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E9EC67A0202B427200361F7F /* PMCourse+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataClass.h"; sourceTree = "<group>"; };
-		E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataClass.m"; sourceTree = "<group>"; };
-		E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditUserTableViewCell.m; sourceTree = "<group>"; };
 		E9EC67AD202B42EC00361F7F /* PMEditUserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditUserTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,15 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				E9EC6763202A14EF00361F7F /* Images */,
+				E9EC6762202A13A900361F7F /* Models */,
 				E9EC67AB202B42EC00361F7F /* Cells */,
 				E90F022E202C4EB400016D51 /* Categories */,
-				E9EC6762202A13A900361F7F /* Models */,
 				E9EC67A9202B42BF00361F7F /* ManadgeControllers */,
 				E9EC6796202B40A900361F7F /* CoreDataControllers */,
 				E9EC673D202A0E0900361F7F /* AppDelegate.h */,
 				E9EC673E202A0E0900361F7F /* AppDelegate.m */,
-				E9EC6740202A0E0900361F7F /* ViewController.h */,
-				E9EC6741202A0E0900361F7F /* ViewController.m */,
 				E9EC6765202A16C800361F7F /* PMDataManager.h */,
 				E9EC6766202A16C800361F7F /* PMDataManager.m */,
 				E9EC6743202A0E0900361F7F /* Main.storyboard */,
@@ -130,18 +143,22 @@
 		E9EC6762202A13A900361F7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E9EC6797202B427200361F7F /* PMObject+CoreDataProperties.h */,
-				E9EC6798202B427200361F7F /* PMObject+CoreDataClass.h */,
-				E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */,
-				E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */,
-				E9EC679B202B427200361F7F /* PMUser+CoreDataProperties.h */,
-				E9EC679C202B427200361F7F /* PMUser+CoreDataClass.h */,
-				E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */,
-				E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */,
-				E9EC679F202B427200361F7F /* PMCourse+CoreDataProperties.h */,
-				E9EC67A0202B427200361F7F /* PMCourse+CoreDataClass.h */,
-				E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */,
-				E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */,
+				E90F0238202C7A8A00016D51 /* PMUser+CoreDataProperties.h */,
+				E90F0239202C7A8A00016D51 /* PMUser+CoreDataClass.h */,
+				E90F023A202C7A8A00016D51 /* PMUser+CoreDataClass.m */,
+				E90F023B202C7A8A00016D51 /* PMUser+CoreDataProperties.m */,
+				E90F023C202C7A8A00016D51 /* PMCourse+CoreDataProperties.h */,
+				E90F023D202C7A8A00016D51 /* PMCourse+CoreDataClass.h */,
+				E90F023E202C7A8A00016D51 /* PMCourse+CoreDataClass.m */,
+				E90F023F202C7A8A00016D51 /* PMCourse+CoreDataProperties.m */,
+				E90F0240202C7A8A00016D51 /* PMTeacher+CoreDataProperties.h */,
+				E90F0241202C7A8A00016D51 /* PMTeacher+CoreDataClass.h */,
+				E90F0242202C7A8A00016D51 /* PMTeacher+CoreDataClass.m */,
+				E90F0243202C7A8A00016D51 /* PMTeacher+CoreDataProperties.m */,
+				E90F0244202C7A8A00016D51 /* PMObject+CoreDataProperties.h */,
+				E90F0245202C7A8A00016D51 /* PMObject+CoreDataClass.h */,
+				E90F0246202C7A8A00016D51 /* PMObject+CoreDataClass.m */,
+				E90F0247202C7A8A00016D51 /* PMObject+CoreDataProperties.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +168,10 @@
 			children = (
 				E9EC6793202B405800361F7F /* PMCoreDataTableViewController.h */,
 				E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */,
+				E9EC6740202A0E0900361F7F /* PMUsersViewController.h */,
+				E9EC6741202A0E0900361F7F /* PMUsersViewController.m */,
+				E90F022F202C662C00016D51 /* PMCoursesViewController.h */,
+				E90F0230202C662C00016D51 /* PMCoursesViewController.m */,
 			);
 			path = CoreDataControllers;
 			sourceTree = "<group>";
@@ -160,6 +181,8 @@
 			children = (
 				E9EC676E202A214000361F7F /* PMEditUserViewController.h */,
 				E9EC676F202A214000361F7F /* PMEditUserViewController.m */,
+				E90F0232202C6BF200016D51 /* PMEditCourseViewController.h */,
+				E90F0233202C6BF200016D51 /* PMEditCourseViewController.m */,
 			);
 			path = ManadgeControllers;
 			sourceTree = "<group>";
@@ -169,6 +192,8 @@
 			children = (
 				E9EC67AD202B42EC00361F7F /* PMEditUserTableViewCell.h */,
 				E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */,
+				E90F0235202C70CF00016D51 /* PMEditCourseTableViewCell.h */,
+				E90F0236202C70CF00016D51 /* PMEditCourseTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -246,20 +271,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC67AE202B48E700361F7F /* PMEditUserTableViewCell.m in Sources */,
-				E9EC67A7202B427200361F7F /* PMCourse+CoreDataClass.m in Sources */,
-				E9EC67A5202B427200361F7F /* PMUser+CoreDataClass.m in Sources */,
-				E9EC67A8202B427200361F7F /* PMCourse+CoreDataProperties.m in Sources */,
-				E9EC6742202A0E0900361F7F /* ViewController.m in Sources */,
-				E9EC67A3202B427200361F7F /* PMObject+CoreDataClass.m in Sources */,
+				E90F024B202C7A8A00016D51 /* PMCourse+CoreDataProperties.m in Sources */,
+				E90F0237202C70CF00016D51 /* PMEditCourseTableViewCell.m in Sources */,
+				E90F0231202C662C00016D51 /* PMCoursesViewController.m in Sources */,
+				E9EC6742202A0E0900361F7F /* PMUsersViewController.m in Sources */,
 				E90F022D202C4E0900016D51 /* UIView+PMTableViewCell.m in Sources */,
+				E90F0249202C7A8A00016D51 /* PMUser+CoreDataProperties.m in Sources */,
+				E90F024F202C7A8A00016D51 /* PMObject+CoreDataProperties.m in Sources */,
 				E9EC6795202B405800361F7F /* PMCoreDataTableViewController.m in Sources */,
-				E9EC67A6202B427200361F7F /* PMUser+CoreDataProperties.m in Sources */,
+				E90F024E202C7A8A00016D51 /* PMObject+CoreDataClass.m in Sources */,
+				E90F0248202C7A8A00016D51 /* PMUser+CoreDataClass.m in Sources */,
+				E90F024C202C7A8A00016D51 /* PMTeacher+CoreDataClass.m in Sources */,
+				E90F024A202C7A8A00016D51 /* PMCourse+CoreDataClass.m in Sources */,
 				E9EC6770202A214000361F7F /* PMEditUserViewController.m in Sources */,
 				E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */,
 				E9EC6767202A16C800361F7F /* PMDataManager.m in Sources */,
-				E9EC67A4202B427200361F7F /* PMObject+CoreDataProperties.m in Sources */,
 				E9EC6750202A0E0900361F7F /* main.m in Sources */,
 				E9EC6748202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld in Sources */,
+				E90F0234202C6BF200016D51 /* PMEditCourseViewController.m in Sources */,
+				E90F024D202C7A8A00016D51 /* PMTeacher+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

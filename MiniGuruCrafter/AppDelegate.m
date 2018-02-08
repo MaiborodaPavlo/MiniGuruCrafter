@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PMDataManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /*
+    [[PMDataManager sharedManager] deleteAllObjects];
+    [[PMDataManager sharedManager] generateAndAddRandomData];
+    [[PMDataManager sharedManager] printAllObjects];
+    [[PMDataManager sharedManager] saveContext];
+    */
+    
     return YES;
 }
 
