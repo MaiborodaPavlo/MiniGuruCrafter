@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PMCoreDataTableViewController.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : PMCoreDataTableViewController
+
+- (IBAction) actionAddUser: (UIBarButtonItem *) sender;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90F022D202C4E0900016D51 /* UIView+PMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F022C202C4E0900016D51 /* UIView+PMTableViewCell.m */; };
 		E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC673E202A0E0900361F7F /* AppDelegate.m */; };
 		E9EC6742202A0E0900361F7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6741202A0E0900361F7F /* ViewController.m */; };
 		E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6743202A0E0900361F7F /* Main.storyboard */; };
@@ -14,9 +15,22 @@
 		E9EC674A202A0E0900361F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6749202A0E0900361F7F /* Assets.xcassets */; };
 		E9EC674D202A0E0900361F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC674B202A0E0900361F7F /* LaunchScreen.storyboard */; };
 		E9EC6750202A0E0900361F7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC674F202A0E0900361F7F /* main.m */; };
+		E9EC6764202A14EF00361F7F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6763202A14EF00361F7F /* Images */; };
+		E9EC6767202A16C800361F7F /* PMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6766202A16C800361F7F /* PMDataManager.m */; };
+		E9EC6770202A214000361F7F /* PMEditUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC676F202A214000361F7F /* PMEditUserViewController.m */; };
+		E9EC6795202B405800361F7F /* PMCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */; };
+		E9EC67A3202B427200361F7F /* PMObject+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */; };
+		E9EC67A4202B427200361F7F /* PMObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */; };
+		E9EC67A5202B427200361F7F /* PMUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */; };
+		E9EC67A6202B427200361F7F /* PMUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */; };
+		E9EC67A7202B427200361F7F /* PMCourse+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */; };
+		E9EC67A8202B427200361F7F /* PMCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */; };
+		E9EC67AE202B48E700361F7F /* PMEditUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90F022B202C4E0900016D51 /* UIView+PMTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PMTableViewCell.h"; sourceTree = "<group>"; };
+		E90F022C202C4E0900016D51 /* UIView+PMTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PMTableViewCell.m"; sourceTree = "<group>"; };
 		E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniGuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC673D202A0E0900361F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9EC673E202A0E0900361F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,6 +42,27 @@
 		E9EC674C202A0E0900361F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9EC674E202A0E0900361F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9EC674F202A0E0900361F7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9EC6763202A14EF00361F7F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = MiniGuruCrafter/Images; sourceTree = SOURCE_ROOT; };
+		E9EC6765202A16C800361F7F /* PMDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMDataManager.h; sourceTree = "<group>"; };
+		E9EC6766202A16C800361F7F /* PMDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMDataManager.m; sourceTree = "<group>"; };
+		E9EC676E202A214000361F7F /* PMEditUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditUserViewController.h; sourceTree = "<group>"; };
+		E9EC676F202A214000361F7F /* PMEditUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditUserViewController.m; sourceTree = "<group>"; };
+		E9EC6793202B405800361F7F /* PMCoreDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCoreDataTableViewController.h; sourceTree = "<group>"; };
+		E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCoreDataTableViewController.m; sourceTree = "<group>"; };
+		E9EC6797202B427200361F7F /* PMObject+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9EC6798202B427200361F7F /* PMObject+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMObject+CoreDataClass.h"; sourceTree = "<group>"; };
+		E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataClass.m"; sourceTree = "<group>"; };
+		E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9EC679B202B427200361F7F /* PMUser+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9EC679C202B427200361F7F /* PMUser+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9EC679F202B427200361F7F /* PMCourse+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9EC67A0202B427200361F7F /* PMCourse+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PMCourse+CoreDataClass.h"; sourceTree = "<group>"; };
+		E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataClass.m"; sourceTree = "<group>"; };
+		E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PMCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditUserTableViewCell.m; sourceTree = "<group>"; };
+		E9EC67AD202B42EC00361F7F /* PMEditUserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditUserTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90F022E202C4EB400016D51 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E90F022B202C4E0900016D51 /* UIView+PMTableViewCell.h */,
+				E90F022C202C4E0900016D51 /* UIView+PMTableViewCell.m */,
+			);
+			name = Categories;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E9EC6731202A0E0900361F7F = {
 			isa = PBXGroup;
 			children = (
@@ -60,18 +105,72 @@
 		E9EC673C202A0E0900361F7F /* MiniGuruCrafter */ = {
 			isa = PBXGroup;
 			children = (
+				E9EC6763202A14EF00361F7F /* Images */,
+				E9EC67AB202B42EC00361F7F /* Cells */,
+				E90F022E202C4EB400016D51 /* Categories */,
+				E9EC6762202A13A900361F7F /* Models */,
+				E9EC67A9202B42BF00361F7F /* ManadgeControllers */,
+				E9EC6796202B40A900361F7F /* CoreDataControllers */,
 				E9EC673D202A0E0900361F7F /* AppDelegate.h */,
 				E9EC673E202A0E0900361F7F /* AppDelegate.m */,
 				E9EC6740202A0E0900361F7F /* ViewController.h */,
 				E9EC6741202A0E0900361F7F /* ViewController.m */,
+				E9EC6765202A16C800361F7F /* PMDataManager.h */,
+				E9EC6766202A16C800361F7F /* PMDataManager.m */,
 				E9EC6743202A0E0900361F7F /* Main.storyboard */,
+				E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */,
 				E9EC6749202A0E0900361F7F /* Assets.xcassets */,
 				E9EC674B202A0E0900361F7F /* LaunchScreen.storyboard */,
 				E9EC674E202A0E0900361F7F /* Info.plist */,
 				E9EC674F202A0E0900361F7F /* main.m */,
-				E9EC6746202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld */,
 			);
 			path = MiniGuruCrafter;
+			sourceTree = "<group>";
+		};
+		E9EC6762202A13A900361F7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC6797202B427200361F7F /* PMObject+CoreDataProperties.h */,
+				E9EC6798202B427200361F7F /* PMObject+CoreDataClass.h */,
+				E9EC6799202B427200361F7F /* PMObject+CoreDataClass.m */,
+				E9EC679A202B427200361F7F /* PMObject+CoreDataProperties.m */,
+				E9EC679B202B427200361F7F /* PMUser+CoreDataProperties.h */,
+				E9EC679C202B427200361F7F /* PMUser+CoreDataClass.h */,
+				E9EC679D202B427200361F7F /* PMUser+CoreDataClass.m */,
+				E9EC679E202B427200361F7F /* PMUser+CoreDataProperties.m */,
+				E9EC679F202B427200361F7F /* PMCourse+CoreDataProperties.h */,
+				E9EC67A0202B427200361F7F /* PMCourse+CoreDataClass.h */,
+				E9EC67A1202B427200361F7F /* PMCourse+CoreDataClass.m */,
+				E9EC67A2202B427200361F7F /* PMCourse+CoreDataProperties.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9EC6796202B40A900361F7F /* CoreDataControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC6793202B405800361F7F /* PMCoreDataTableViewController.h */,
+				E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */,
+			);
+			path = CoreDataControllers;
+			sourceTree = "<group>";
+		};
+		E9EC67A9202B42BF00361F7F /* ManadgeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC676E202A214000361F7F /* PMEditUserViewController.h */,
+				E9EC676F202A214000361F7F /* PMEditUserViewController.m */,
+			);
+			path = ManadgeControllers;
+			sourceTree = "<group>";
+		};
+		E9EC67AB202B42EC00361F7F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC67AD202B42EC00361F7F /* PMEditUserTableViewCell.h */,
+				E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EC6764202A14EF00361F7F /* Images in Resources */,
 				E9EC674D202A0E0900361F7F /* LaunchScreen.storyboard in Resources */,
 				E9EC674A202A0E0900361F7F /* Assets.xcassets in Resources */,
 				E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */,
@@ -145,8 +245,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EC67AE202B48E700361F7F /* PMEditUserTableViewCell.m in Sources */,
+				E9EC67A7202B427200361F7F /* PMCourse+CoreDataClass.m in Sources */,
+				E9EC67A5202B427200361F7F /* PMUser+CoreDataClass.m in Sources */,
+				E9EC67A8202B427200361F7F /* PMCourse+CoreDataProperties.m in Sources */,
 				E9EC6742202A0E0900361F7F /* ViewController.m in Sources */,
+				E9EC67A3202B427200361F7F /* PMObject+CoreDataClass.m in Sources */,
+				E90F022D202C4E0900016D51 /* UIView+PMTableViewCell.m in Sources */,
+				E9EC6795202B405800361F7F /* PMCoreDataTableViewController.m in Sources */,
+				E9EC67A6202B427200361F7F /* PMUser+CoreDataProperties.m in Sources */,
+				E9EC6770202A214000361F7F /* PMEditUserViewController.m in Sources */,
 				E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */,
+				E9EC6767202A16C800361F7F /* PMDataManager.m in Sources */,
+				E9EC67A4202B427200361F7F /* PMObject+CoreDataProperties.m in Sources */,
 				E9EC6750202A0E0900361F7F /* main.m in Sources */,
 				E9EC6748202A0E0900361F7F /* MiniGuruCrafter.xcdatamodeld in Sources */,
 			);
