@@ -13,12 +13,19 @@
 #import "PMDataManager.h"
 #import "PMEditUserViewController.h"
 #import "PMCheckUsersViewController.h"
+#import "PMCheckTeachersViewController.h"
 
 @interface PMEditCourseViewController ()
 
 @property (assign, nonatomic) BOOL isNew;
 
 @end
+
+typedef enum {
+    PMSectionTypeCourseInfo,
+    PMSectionTypeTeacher,
+    PMSectionTypeStudents
+} PMSectionType;
 
 typedef enum {
     PMCourseDataTypeName,
@@ -51,6 +58,12 @@ typedef enum {
     self.navigationItem.rightBarButtonItem = doneBarButton;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -80,7 +93,7 @@ typedef enum {
 - (void) actionDone: (UIBarButtonItem *) sender {
     
     for (int i = 0; i < 3; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow: i inSection: 0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow: i inSection: PMSectionTypeCourseInfo];
         
         PMEditCourseTableViewCell *cell = [self.tableView cellForRowAtIndexPath: indexPath];
         
@@ -113,9 +126,9 @@ typedef enum {
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    if (section == 0) {
+    if (section == PMSectionTypeCourseInfo) {
         return @"Course info";
-    } else if (section == 1) {
+    } else if (section == PMSectionTypeTeacher) {
         return @"Teacher";
     } else {
         return @"Students";
@@ -124,14 +137,10 @@ typedef enum {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
+    if (section == PMSectionTypeCourseInfo) {
         return 3;
-    } else if (section == 1) {
-        if (self.course.teacher != nil) {
-            return 2;
-        } else {
-            return 1;
-        }
+    } else if (section == PMSectionTypeTeacher) {
+        return 1;
     } else {
         return [self.course.students count] + 1;
     }
@@ -139,7 +148,7 @@ typedef enum {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
+    if (indexPath.section == PMSectionTypeCourseInfo) {
         static NSString *identifier = @"EditCell";
         
         PMEditCourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
@@ -165,7 +174,7 @@ typedef enum {
         
         return cell;
         
-    } else if (indexPath.section == 1) {
+    } else if (indexPath.section == PMSectionTypeTeacher) {
         
         static NSString *identifier = @"TeacherCell";
         
@@ -175,11 +184,13 @@ typedef enum {
             cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: identifier];
         }
         
-        if (indexPath.row == 0) {
+        if (self.course.teacher == nil) {
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
             cell.textLabel.text = @"Add Lecturer";
         } else {
-             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", self.course.teacher.firstName, self.course.teacher.lastName];
+            cell.textLabel.textAlignment = NSTextAlignmentNatural;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", self.course.teacher.firstName, self.course.teacher.lastName];
         }
         
         return cell;
@@ -218,7 +229,7 @@ typedef enum {
 
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        if (indexPath.section == 2) {
+        if (indexPath.section == PMSectionTypeStudents) {
             
             NSMutableArray *tempArray = [NSMutableArray arrayWithArray: [self.course.students allObjects]];
             PMUser *user = [tempArray objectAtIndex: indexPath.row - 1];
@@ -228,21 +239,21 @@ typedef enum {
             
             [tableView deleteRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationFade];
             
-        } else if (indexPath.section == 1) {
+        } else if (indexPath.section == PMSectionTypeTeacher) {
             
             [self.course setTeacher: nil];
-            [tableView deleteRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationFade];
+            [tableView reloadRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationFade];
         }
     }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
+    if (indexPath.section == PMSectionTypeCourseInfo) {
         return NO;
-    } else if (indexPath.section == 1 && indexPath.row == 0) {
+    } else if (indexPath.section == PMSectionTypeTeacher && self.course.teacher == nil) {
         return NO;
-    } else if (indexPath.section == 2 && indexPath.row == 0) {
+    } else if (indexPath.section == PMSectionTypeStudents && indexPath.row == 0) {
         return NO;
     } else {
         return YES;
@@ -251,7 +262,7 @@ typedef enum {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 2 && indexPath.row != 0) {
+    if (indexPath.section == PMSectionTypeStudents && indexPath.row != 0) {
 
         PMUser *user = [[self.course.students allObjects] objectAtIndex: indexPath.row - 1];
         
@@ -260,9 +271,19 @@ typedef enum {
         
         [self.navigationController pushViewController: vc animated: YES];
         
-    } else if (indexPath.section == 2) {
+    } else if (indexPath.section == PMSectionTypeStudents) {
         
         PMCheckUsersViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMCheckUsersViewController"];
+        vc.course = self.course;
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: vc];
+        
+        [self presentViewController: nav animated: YES completion: nil];
+    }
+    
+    if (indexPath.section == PMSectionTypeTeacher) {
+        
+        PMCheckTeachersViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMCheckTeachersViewController"];
         vc.course = self.course;
         
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: vc];
