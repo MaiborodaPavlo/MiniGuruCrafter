@@ -23,5 +23,6 @@
 - (void) printAllObjects;
 - (void) deleteAllObjects;
 - (PMUser *) addUserWithName: (NSString *) firstName lastName: (NSString *) lastName andEmail: (NSString *) email;
+- (NSArray *) getTeachersWithoutCourses;
 
 @end

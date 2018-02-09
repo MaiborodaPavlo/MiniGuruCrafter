@@ -1,40 +1,33 @@
 //
-//  PMEditUserViewController.m
+//  PMEditTeacherViewController.m
 //  MiniGuruCrafter
 //
-//  Created by Pavel on 06.02.2018.
+//  Created by Pavel on 09.02.2018.
 //  Copyright © 2018 Pavel Maiboroda. All rights reserved.
 //
 
-#import "PMEditUserViewController.h"
-#import "PMUser+CoreDataProperties.h"
-#import "PMEditUserTableViewCell.h"
+#import "PMEditTeacherViewController.h"
+#import "PMTeacher+CoreDataProperties.h"
+#import "PMEditTeacherTableViewCell.h"
+#import "PMCourse+CoreDataProperties.h"
 #import "PMDataManager.h"
-#import "UIView+PMTableViewCell.h"
 #import "PMCheckCoursesViewController.h"
 
-@interface PMEditUserViewController () <UITableViewDataSource, UITextFieldDelegate>
+@interface PMEditTeacherViewController ()
 
-@property (assign, nonatomic) BOOL isNewUser;
-
+@property (assign, nonatomic) BOOL isNew;
 
 @end
 
-typedef enum {
-    PMUserDataTypeFirstName,
-    PMUserDataTypeLastName,
-    PMUserDataTypeEmail
-} PMUserDataType;
-
-@implementation PMEditUserViewController
+@implementation PMEditTeacherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.isNewUser = self.user == nil ? YES : NO;
+    self.isNew = self.teacher == nil ? YES : NO;
     
-    if (self.isNewUser) {
-        self.user = [NSEntityDescription insertNewObjectForEntityForName: @"PMUser" inManagedObjectContext: [[[PMDataManager sharedManager] persistentContainer] viewContext]];
+    if (self.isNew) {
+        self.teacher = [NSEntityDescription insertNewObjectForEntityForName: @"PMTeacher" inManagedObjectContext: [[[PMDataManager sharedManager] persistentContainer] viewContext]];
         
         [self.navigationItem setHidesBackButton: YES];
         
@@ -43,12 +36,11 @@ typedef enum {
         self.navigationItem.leftBarButtonItem = cancelBarButton;
     }
     
-    self.navigationItem.title = self.isNewUser ? @"Add new user" : @"Edit user";
+    self.navigationItem.title = self.isNew ? @"Add new teacher" : @"Edit Teacher";
     
     UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle: @"Done" style: UIBarButtonItemStyleDone target: self action: @selector(actionDone:)];
     
     self.navigationItem.rightBarButtonItem = doneBarButton;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,15 +52,13 @@ typedef enum {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-    
 }
 
 #pragma mark - Actions
 
 - (void) dismissMe {
     
-    if (self.isNewUser) {
+    if (self.isNew) {
         [self dismissViewControllerAnimated: YES completion: nil];
     } else {
         [self.navigationController popViewControllerAnimated: YES];
@@ -77,7 +67,7 @@ typedef enum {
 
 - (void) actionCancel: (UIBarButtonItem *) sender {
     
-    [[[[PMDataManager sharedManager] persistentContainer] viewContext] deleteObject: self.user];
+    [[[[PMDataManager sharedManager] persistentContainer] viewContext] deleteObject: self.teacher];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dismissMe];
@@ -86,53 +76,46 @@ typedef enum {
 
 - (void) actionDone: (UIBarButtonItem *) sender {
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 2; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow: i inSection: 0];
         
-        PMEditUserTableViewCell *cell = [self.tableView cellForRowAtIndexPath: indexPath];
+        PMEditTeacherTableViewCell *cell = [self.tableView cellForRowAtIndexPath: indexPath];
         
         if ([cell.nameLabel.text isEqualToString: @"First name"]) {
-            self.user.firstName = cell.nameField.text;
+            self.teacher.firstName = cell.nameField.text;
         } else if([cell.nameLabel.text isEqualToString: @"Last name"]) {
-            self.user.lastName = cell.nameField.text;
-        } else if ([cell.nameLabel.text isEqualToString: @"Email"]) {
-            self.user.email = cell.nameField.text;
+            self.teacher.lastName = cell.nameField.text;
         }
     }
     
-    NSError *error = nil;
-    
-    [self.user.managedObjectContext save: &error];
-    
-    if (error) {
-        NSLog(@"ERRROR: %@", [error localizedDescription]);
-    }
+    [[PMDataManager sharedManager] saveContext];
     
     [self dismissMe];
 }
 
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 2;
+
+        return 2;
 }
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     if (section == 0) {
-        return @"User info";
+        return @"Teacher info";
     } else {
         return @"Courses";
     }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     if (section == 0) {
-        return 3;
+        return 2;
     } else {
-        return [self.user.lernCourses count] + 1;
+        return [self.teacher.courses count] + 1;
     }
 }
 
@@ -141,22 +124,17 @@ typedef enum {
     if (indexPath.section == 0) {
         static NSString *identifier = @"EditCell";
         
-        PMEditUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
+        PMEditTeacherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
         
         switch (indexPath.row) {
-            case PMUserDataTypeFirstName:
+            case 0:
                 cell.nameLabel.text = @"First name";
-                cell.nameField.text = self.user.firstName;
+                cell.nameField.text = self.teacher.firstName;
                 break;
                 
-            case PMUserDataTypeLastName:
+            case 1:
                 cell.nameLabel.text = @"Last name";
-                cell.nameField.text = self.user.lastName;
-                break;
-                
-            case PMUserDataTypeEmail:
-                cell.nameLabel.text = @"Email";
-                cell.nameField.text = self.user.email;
+                cell.nameField.text = self.teacher.lastName;
                 break;
                 
             default: NSLog(@"AAAA");
@@ -166,6 +144,7 @@ typedef enum {
         return cell;
         
     } else {
+        
         static NSString *identifier = @"CourseCell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: identifier];
@@ -179,12 +158,10 @@ typedef enum {
             cell.textLabel.text = @"Add Course";
         } else {
             cell.textLabel.textAlignment = NSTextAlignmentNatural;
-            
-            NSArray *tempArray = [self.user.lernCourses allObjects];
+            NSArray *tempArray = [self.teacher.courses allObjects];
             
             cell.textLabel.text = [NSString stringWithFormat:@"%@",[[tempArray objectAtIndex: indexPath.row - 1] name]];
         }
-        
         return cell;
     }
     
@@ -211,12 +188,12 @@ typedef enum {
         
         if (indexPath.section == 1) {
             
-            NSMutableArray *tempArray = [NSMutableArray arrayWithArray: [self.user.lernCourses allObjects]];
+            NSMutableArray *tempArray = [NSMutableArray arrayWithArray: [self.teacher.courses allObjects]];
             PMCourse *course = [tempArray objectAtIndex: indexPath.row - 1];
             
             [tempArray removeObject: course];
-            [self.user setLernCourses: [NSSet setWithArray: tempArray]];
-
+            [self.teacher setCourses: [NSSet setWithArray: tempArray]];
+            
             [tableView deleteRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationFade];
         }
     }
@@ -227,55 +204,12 @@ typedef enum {
     if (indexPath.section == 1 && indexPath.row == 0) {
         
         PMCheckCoursesViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier: @"PMCheckCoursesViewController"];
-        vc.user = self.user;
+        vc.teacher = self.teacher;
         
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: vc];
         
         [self presentViewController: nav animated: YES completion: nil];
     }
-}
-
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    PMEditUserTableViewCell *cell = (PMEditUserTableViewCell *)[textField superCell];
-    
-    if ([cell.nameLabel.text isEqualToString: @"Email"]) {
-        textField.returnKeyType = UIReturnKeyDone;
-        [textField resignFirstResponder];
-    }
-    
-    return YES;
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
-    PMEditUserTableViewCell *cell = (PMEditUserTableViewCell *)[textField superCell];
-    
-    if ([cell.nameLabel.text isEqualToString: @"Email"]) {
-    
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@".ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@0123456789!#$%&'*+-/=?^_`{|}~"] invertedSet];
-        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
-        
-        if ([textField.text rangeOfString:@"@"].location == NSNotFound && [string rangeOfString:@"@"].location != NSNotFound) {
-            return [string isEqualToString:filtered];
-            
-        } else if ([string rangeOfString:@"@"].location == NSNotFound) {
-            
-            return [string isEqualToString:filtered];
-        } else {
-            return NO;
-        }
-    } else {
-        NSCharacterSet *invalidCharSet = [[NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"] invertedSet];
-        NSString *filtered = [[string componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
-        
-        return [string isEqualToString: filtered];
-    }
-    
-    return YES;
-    
 }
 
 

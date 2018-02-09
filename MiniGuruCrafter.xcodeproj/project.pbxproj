@@ -21,6 +21,10 @@
 		E90F024F202C7A8A00016D51 /* PMObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0247202C7A8A00016D51 /* PMObject+CoreDataProperties.m */; };
 		E90F0252202C916D00016D51 /* PMCheckUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0251202C916D00016D51 /* PMCheckUsersViewController.m */; };
 		E90F0255202D9F2200016D51 /* PMCheckTeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0254202D9F2200016D51 /* PMCheckTeachersViewController.m */; };
+		E90F0258202DAC6400016D51 /* PMTeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0257202DAC6400016D51 /* PMTeachersViewController.m */; };
+		E90F025B202DAD5600016D51 /* PMEditTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F025A202DAD5600016D51 /* PMEditTeacherViewController.m */; };
+		E90F025E202DB5F100016D51 /* PMCheckCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F025D202DB5F100016D51 /* PMCheckCoursesViewController.m */; };
+		E90F0261202DC07700016D51 /* PMEditTeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90F0260202DC07700016D51 /* PMEditTeacherTableViewCell.m */; };
 		E9EC673F202A0E0900361F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC673E202A0E0900361F7F /* AppDelegate.m */; };
 		E9EC6742202A0E0900361F7F /* PMUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EC6741202A0E0900361F7F /* PMUsersViewController.m */; };
 		E9EC6745202A0E0900361F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC6743202A0E0900361F7F /* Main.storyboard */; };
@@ -64,6 +68,14 @@
 		E90F0251202C916D00016D51 /* PMCheckUsersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCheckUsersViewController.m; sourceTree = "<group>"; };
 		E90F0253202D9F2200016D51 /* PMCheckTeachersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCheckTeachersViewController.h; sourceTree = "<group>"; };
 		E90F0254202D9F2200016D51 /* PMCheckTeachersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCheckTeachersViewController.m; sourceTree = "<group>"; };
+		E90F0256202DAC6400016D51 /* PMTeachersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMTeachersViewController.h; sourceTree = "<group>"; };
+		E90F0257202DAC6400016D51 /* PMTeachersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMTeachersViewController.m; sourceTree = "<group>"; };
+		E90F0259202DAD5600016D51 /* PMEditTeacherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditTeacherViewController.h; sourceTree = "<group>"; };
+		E90F025A202DAD5600016D51 /* PMEditTeacherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditTeacherViewController.m; sourceTree = "<group>"; };
+		E90F025C202DB5F100016D51 /* PMCheckCoursesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMCheckCoursesViewController.h; sourceTree = "<group>"; };
+		E90F025D202DB5F100016D51 /* PMCheckCoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMCheckCoursesViewController.m; sourceTree = "<group>"; };
+		E90F025F202DC07700016D51 /* PMEditTeacherTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMEditTeacherTableViewCell.h; sourceTree = "<group>"; };
+		E90F0260202DC07700016D51 /* PMEditTeacherTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMEditTeacherTableViewCell.m; sourceTree = "<group>"; };
 		E9EC673A202A0E0900361F7F /* MiniGuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniGuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC673D202A0E0900361F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9EC673E202A0E0900361F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,12 +188,16 @@
 				E9EC6794202B405800361F7F /* PMCoreDataTableViewController.m */,
 				E9EC6740202A0E0900361F7F /* PMUsersViewController.h */,
 				E9EC6741202A0E0900361F7F /* PMUsersViewController.m */,
+				E90F0256202DAC6400016D51 /* PMTeachersViewController.h */,
+				E90F0257202DAC6400016D51 /* PMTeachersViewController.m */,
 				E90F022F202C662C00016D51 /* PMCoursesViewController.h */,
 				E90F0230202C662C00016D51 /* PMCoursesViewController.m */,
 				E90F0250202C916D00016D51 /* PMCheckUsersViewController.h */,
 				E90F0251202C916D00016D51 /* PMCheckUsersViewController.m */,
 				E90F0253202D9F2200016D51 /* PMCheckTeachersViewController.h */,
 				E90F0254202D9F2200016D51 /* PMCheckTeachersViewController.m */,
+				E90F025C202DB5F100016D51 /* PMCheckCoursesViewController.h */,
+				E90F025D202DB5F100016D51 /* PMCheckCoursesViewController.m */,
 			);
 			path = CoreDataControllers;
 			sourceTree = "<group>";
@@ -191,6 +207,8 @@
 			children = (
 				E9EC676E202A214000361F7F /* PMEditUserViewController.h */,
 				E9EC676F202A214000361F7F /* PMEditUserViewController.m */,
+				E90F0259202DAD5600016D51 /* PMEditTeacherViewController.h */,
+				E90F025A202DAD5600016D51 /* PMEditTeacherViewController.m */,
 				E90F0232202C6BF200016D51 /* PMEditCourseViewController.h */,
 				E90F0233202C6BF200016D51 /* PMEditCourseViewController.m */,
 			);
@@ -202,6 +220,8 @@
 			children = (
 				E9EC67AD202B42EC00361F7F /* PMEditUserTableViewCell.h */,
 				E9EC67AC202B42EC00361F7F /* PMEditUserTableViewCell.m */,
+				E90F025F202DC07700016D51 /* PMEditTeacherTableViewCell.h */,
+				E90F0260202DC07700016D51 /* PMEditTeacherTableViewCell.m */,
 				E90F0235202C70CF00016D51 /* PMEditCourseTableViewCell.h */,
 				E90F0236202C70CF00016D51 /* PMEditCourseTableViewCell.m */,
 			);
@@ -283,16 +303,20 @@
 				E9EC67AE202B48E700361F7F /* PMEditUserTableViewCell.m in Sources */,
 				E90F024B202C7A8A00016D51 /* PMCourse+CoreDataProperties.m in Sources */,
 				E90F0237202C70CF00016D51 /* PMEditCourseTableViewCell.m in Sources */,
+				E90F0261202DC07700016D51 /* PMEditTeacherTableViewCell.m in Sources */,
 				E90F0255202D9F2200016D51 /* PMCheckTeachersViewController.m in Sources */,
 				E90F0231202C662C00016D51 /* PMCoursesViewController.m in Sources */,
 				E90F0252202C916D00016D51 /* PMCheckUsersViewController.m in Sources */,
+				E90F0258202DAC6400016D51 /* PMTeachersViewController.m in Sources */,
 				E9EC6742202A0E0900361F7F /* PMUsersViewController.m in Sources */,
 				E90F022D202C4E0900016D51 /* UIView+PMTableViewCell.m in Sources */,
 				E90F0249202C7A8A00016D51 /* PMUser+CoreDataProperties.m in Sources */,
 				E90F024F202C7A8A00016D51 /* PMObject+CoreDataProperties.m in Sources */,
 				E9EC6795202B405800361F7F /* PMCoreDataTableViewController.m in Sources */,
+				E90F025E202DB5F100016D51 /* PMCheckCoursesViewController.m in Sources */,
 				E90F024E202C7A8A00016D51 /* PMObject+CoreDataClass.m in Sources */,
 				E90F0248202C7A8A00016D51 /* PMUser+CoreDataClass.m in Sources */,
+				E90F025B202DAD5600016D51 /* PMEditTeacherViewController.m in Sources */,
 				E90F024C202C7A8A00016D51 /* PMTeacher+CoreDataClass.m in Sources */,
 				E90F024A202C7A8A00016D51 /* PMCourse+CoreDataClass.m in Sources */,
 				E9EC6770202A214000361F7F /* PMEditUserViewController.m in Sources */,

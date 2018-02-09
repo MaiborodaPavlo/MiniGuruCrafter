@@ -143,6 +143,23 @@ static NSString* lastNames[] = {
     [self saveContext];
 }
 
+- (NSArray *) getTeachersWithoutCourses {
+    
+    NSFetchRequest *fetchRequest = [PMTeacher fetchRequest];
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"courses.@count == %d", 0];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey: @"firstName" ascending: YES];
+    NSSortDescriptor *lastNameDescriptor = [[NSSortDescriptor alloc] initWithKey: @"lastName" ascending: YES];
+    
+    [fetchRequest setSortDescriptors: @[firstNameDescriptor, lastNameDescriptor]];
+    
+    NSError *error = nil;
+    
+    return [self.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+}
+
 - (void) generateAndAddRandomData {
     
     NSArray *courses = @[[self addCourseWithName: @"iOS development" subject:@"Objective-c" andBranch: @"mobile programming"], [self addCourseWithName: @"Android development" subject: @"Java" andBranch: @"mobile programming"], [self addCourseWithName: @"Backend. PHP development" subject: @"PHP" andBranch: @"web development"], [self addCourseWithName: @"Frontend. JavaScript level" subject: @"JS" andBranch: @"web development"], [self addCourseWithName: @"Frontend. HTML level" subject: @"HTML" andBranch: @"web development"]];
